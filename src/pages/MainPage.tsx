@@ -88,25 +88,25 @@ function MainPage() {
       <div className="px-4 py-3">
         <button
           type="button"
-          className="flex w-full items-center gap-3 rounded-full border border-gray-200 bg-white px-4 py-3"
+          className="flex w-full items-center gap-3 rounded-full border-2 border-black bg-white px-4 py-3"
           onClick={() => navigate('/search')}
         >
-          <Search size={20} className="shrink-0 text-gray-300" />
-          <span className="flex-1 text-left text-sm text-gray-300">앱팡에서 검색하세요!</span>
-          <Camera size={20} className="shrink-0 text-black" />
+          <Search size={16} className="shrink-0 text-black" />
+          <span className="flex-1 text-left text-body-3 text-gray-300">앱팡에서 검색하세요!</span>
+          <Camera size={24} className="shrink-0 text-black" />
         </button>
       </div>
 
       {/* Banner Slider */}
       <div
-        className="relative h-52 overflow-hidden"
+        className="grid h-52 overflow-hidden"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         role="region"
         aria-label="배너 슬라이더"
       >
         <div
-          className="flex h-full transition-transform duration-300 ease-in-out"
+          className="col-start-1 row-start-1 flex h-full transition-transform duration-300 ease-in-out"
           style={{ transform: `translateX(-${currentBanner * 100}%)` }}
         >
           {BANNERS.map(banner => (
@@ -121,7 +121,7 @@ function MainPage() {
             </button>
           ))}
         </div>
-        <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+        <div className="col-start-1 row-start-1 flex items-end justify-center gap-2 pb-4 z-10">
           {BANNERS.map((banner, index) => (
             <button
               key={banner.id}
@@ -137,7 +137,7 @@ function MainPage() {
       </div>
 
       {/* Category Menu */}
-      <div className="px-2 py-4">
+      <div className="px-2 py-4 my-4">
         <div className="grid grid-cols-5">
           {CATEGORIES.map(cat => (
             <button
