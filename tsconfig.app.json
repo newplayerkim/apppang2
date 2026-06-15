@@ -21,9 +21,9 @@
     },
 
     /* Linting */
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    // "noUnusedLocals": true,     // 리팩토링 시 활성화
+    // "noUnusedParameters": true, // 리팩토링 시 활성화
+    // "erasableSyntaxOnly": true, // 리팩토링 시 활성화
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src"]

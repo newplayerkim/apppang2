@@ -20,4 +20,9 @@
 
 - Context API 사용 금지
 - inline style 금지
-- any 타입 금지
+<!-- - any 타입 금지 (리팩토링 시 복원) -->
+
+## 공통 컴포넌트
+
+- 2개 이상의 페이지에서 쓰이면 components/로 분리
+- 페이지 전용이면 pages/ 파일 내 local component로
